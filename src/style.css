@@ -1,0 +1,25 @@
+@import url(./reset.css);
+
+:root {
+    --font-color: #EEEEEE;
+    --main: #541212;
+    --sub: #0F0E0E;
+    --highlight: #8B9A46;
+}
+
+body {
+    color: #EEEEEE;
+}
+
+.nav {
+    background-color: var(--sub);
+}
+
+nav, ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+ .nav-link, .brand-logo {
+    display: block;
+ }
