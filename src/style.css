@@ -1,19 +1,61 @@
 @import url(./reset.css);
 
 :root {
-    --font-color: #EEEEEE;
+    --font-color: #FFFFF0;
     --main: #541212;
     --sub: #0F0E0E;
     --highlight: #8B9A46;
+    --pad: .7em;
+    --button-pad: .5em;
+    --button-rad: 10px;
+    --main-size: 18px;
+    --main-font: houschka-rounded, sans-serif;
+    --title-font: gastromond, sans-serif;
+    --info-font: utopia-std, serif;
 }
 
 body {
-    color: #EEEEEE;
+    background-color: #FFFAFA;
+    color: black;
+    font-family: var(--main-font);
+    font-size: var(--main-size);
 }
 
+
+/* nav styling */
 .nav {
+    color: var(--font-color);
     background-color: var(--sub);
+    padding: var(--pad);
+    align-items: center;
 }
+
+h1 {
+    font-family: var(--title-font);
+}
+
+.info {
+    font-family: var(--info-font);
+}
+
+.nav ul {
+    width: 200px;
+}
+
+.nav .sign-in {
+    color: var(--sub);
+    background-color: var(--highlight);
+    border: 2px solid var(--highlight);
+    padding: var(--button-pad);
+    border-radius: 10px;
+}
+
+.sign-in:hover {
+    cursor: pointer;
+    background-color: var(--main);
+    color: var(--font-color);
+}
+
 
 nav, ul {
     display: flex;

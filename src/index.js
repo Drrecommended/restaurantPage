@@ -7,9 +7,12 @@ const nav = () => {
   const nav = document.createElement('nav')
   nav.classList.add('nav')
   
-  const brand = document.createElement('a')
-  brand.classList.add('brand-logo')
-  brand.innerText = 'your brand'
+  const brand = document.createElement('i')
+  brand.classList.add('fa-solid')
+  brand.classList.add('fa-pizza-slice')
+
+  
+ 
 
   const signIn = document.createElement('a')
   signIn.classList.add('sign-in')
