@@ -1,36 +1,35 @@
 import './style.css'
+import { nav } from './navbar/nav'
+import { home } from './pages/home'
+import { menu } from './pages/menu'
+import { contact } from './pages/contact'
+
+const header = document.getElementById('header')
 const content = document.getElementById('content')
 
-const nav = () => {
-  const links = ['home', 'menu', 'contact']
 
-  const nav = document.createElement('nav')
-  nav.classList.add('nav')
-  
-  const brand = document.createElement('i')
-  brand.classList.add('fa-solid')
-  brand.classList.add('fa-pizza-slice')
+const togglePage = (that) => {
+  const page = that.target.innerText 
+  content.innerHTML = ''
+  switch (page) {
+    case 'HOME':
+      console.log('you are on the home page')
+      content.appendChild(home)
+      break
+    case 'MENU':
+      console.log('you are looking at menu')
+      content.appendChild(menu)
+      break
+    case 'CONTACT':
 
-  
- 
-
-  const signIn = document.createElement('a')
-  signIn.classList.add('sign-in')
-  signIn.innerText = 'SIGN IN'
-
-  const ul = document.createElement('ul')
-  for (let i = 0; i < links.length; i++) {
-    const li = document.createElement('li')
-    li.innerText = links[i]
-    li.classList.add('nav-link')
-    ul.appendChild(li)
+      console.log('CONTACT')
+      content.appendChild(contact)
+      break
   }
-
-  nav.appendChild(brand)
-  nav.appendChild(ul)
-  nav.appendChild(signIn)
-
-  return nav
+  console.log(page)
 }
 
-content.appendChild(nav())
+export default togglePage
+
+header.appendChild(nav())
+content.appendChild(home())

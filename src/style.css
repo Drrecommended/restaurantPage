@@ -1,67 +1,91 @@
 @import url(./reset.css);
 
 :root {
-    --font-color: #FFFFF0;
-    --main: #541212;
-    --sub: #0F0E0E;
-    --highlight: #8B9A46;
-    --pad: .7em;
-    --button-pad: .5em;
-    --button-rad: 10px;
-    --main-size: 18px;
-    --main-font: houschka-rounded, sans-serif;
-    --title-font: gastromond, sans-serif;
-    --info-font: utopia-std, serif;
+  --font-color: #fffff0;
+  --main: #541212;
+  --sub: #8b9a46;
+  --highlight: #0f0e0e;
+  --pad: 0.7em;
+  --button-pad: 0.5em;
+  --button-rad: 10px;
+  --main-size: 18px;
+  --main-font: houschka-rounded, sans-serif;
+  --title-font: gastromond, sans-serif;
+  --info-font: utopia-std, serif;
 }
 
 body {
-    background-color: #FFFAFA;
-    color: black;
-    font-family: var(--main-font);
-    font-size: var(--main-size);
+  background-color: #fffafa;
+  color: black;
+  font-family: var(--main-font);
+  font-size: var(--main-size);
 }
-
 
 /* nav styling */
 .nav {
-    color: var(--font-color);
-    background-color: var(--sub);
-    padding: var(--pad);
-    align-items: center;
+  color: var(--font-color);
+  background-color: var(--sub);
+  padding: var(--pad);
+  align-items: center;
+  border-bottom: 2px solid var(--main);
 }
 
+/* .headerImg {
+    background: url('./assets/unsplash1.jpg');
+    height: 30px;
+    width: 100%;
+} */
+
 h1 {
-    font-family: var(--title-font);
+  font-family: var(--title-font);
 }
 
 .info {
-    font-family: var(--info-font);
+  font-family: var(--info-font);
 }
 
 .nav ul {
-    width: 200px;
+  width: 280px;
+}
+
+.nav .nav-link,
+.sign-in {
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  font-weight: 700;
 }
 
 .nav .sign-in {
-    color: var(--sub);
-    background-color: var(--highlight);
-    border: 2px solid var(--highlight);
-    padding: var(--button-pad);
-    border-radius: 10px;
+  color: var(--highlight);
+  border: 2px solid var(--highlight);
+  padding: var(--button-pad);
+  border-radius: 18px;
 }
 
 .sign-in:hover {
-    cursor: pointer;
-    background-color: var(--main);
-    color: var(--font-color);
+  background-color: var(--highlight);
+  border-color: var(--main);
+  color: var(--font-color);
 }
 
-
-nav, ul {
-    display: flex;
-    justify-content: space-between;
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--highlight);
 }
 
- .nav-link, .brand-logo {
-    display: block;
- }
+.sign-in:hover,
+.nav-link:hover {
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+nav,
+ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link,
+.brand-logo {
+  display: block;
+}
