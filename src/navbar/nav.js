@@ -14,12 +14,20 @@ const nav = () => {
   signIn.classList.add('sign-in')
   signIn.innerText = 'SIGN IN'
 
+  //make links that dont go anywhere in li's
   const ul = document.createElement('ul')
   for (let i = 0; i < links.length; i++) {
     const li = document.createElement('li')
-    li.innerText = links[i]
-    li.classList.add('nav-link')
-    li.addEventListener('click', togglePage.bind(this))
+    const navLink = document.createElement('a')
+
+    navLink.innerText = links[i]
+    navLink.classList.add('nav-link')
+    navLink.title = `a link to ${links[i]}`
+    navLink.dataset.dataPage = links[i]
+    navLink.href = "#"
+    console.log(navLink.dataset.dataPage)
+    li.appendChild(navLink)
+    navLink.addEventListener('click', togglePage.bind(this))
     ul.appendChild(li)
   }
 
