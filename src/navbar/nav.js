@@ -1,4 +1,4 @@
-import togglePage from '../index'
+import changePage from '../index'
 
 const nav = () => {
   const links = ['home', 'menu', 'contact']
@@ -14,7 +14,6 @@ const nav = () => {
   signIn.classList.add('sign-in')
   signIn.innerText = 'SIGN IN'
 
-  //make links that dont go anywhere in li's
   const ul = document.createElement('ul')
   for (let i = 0; i < links.length; i++) {
     const li = document.createElement('li')
@@ -23,11 +22,11 @@ const nav = () => {
     navLink.innerText = links[i]
     navLink.classList.add('nav-link')
     navLink.title = `a link to ${links[i]}`
-    navLink.dataset.dataPage = links[i]
+    navLink.dataset.page = links[i]
     navLink.href = "#"
-    console.log(navLink.dataset.dataPage)
+    console.log(navLink.dataset.page)
     li.appendChild(navLink)
-    navLink.addEventListener('click', togglePage.bind(this))
+    navLink.addEventListener('click', changePage.bind(this))
     ul.appendChild(li)
   }
 
