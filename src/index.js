@@ -6,9 +6,9 @@ import { menu } from './pages/menu'
 import { contact } from './pages/contact'
 import homePhoto from './assets/unsplash1.jpg'
 
-
 const header = document.getElementById('header')
 const content = document.getElementById('content')
+const footer = document.getElementById('footer')
 
 export default function changePage(that) {
   let selectedPage = that.target.dataset.page
@@ -36,9 +36,17 @@ function appendPage(page) {
       break
     default:
       content.appendChild(home())
-
   }
 }
 
+const foot = () => {
+  const credits = document.createElement('p')
+  credits.classList.add('foot')
+  credits.innerText = 'here are the credits'
+  return credits
+}
+
+
 header.appendChild(nav())
 content.appendChild(home())
+footer.appendChild(foot())
