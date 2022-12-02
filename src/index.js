@@ -1,8 +1,11 @@
 import './style.css'
 import { nav } from './navbar/nav'
+import { navHeader } from './navbar/navHeader'
 import { home } from './pages/home'
 import { menu } from './pages/menu'
 import { contact } from './pages/contact'
+import homePhoto from './assets/unsplash1.jpg'
+
 
 const header = document.getElementById('header')
 const content = document.getElementById('content')
@@ -11,7 +14,6 @@ export default function changePage(that) {
   let selectedPage = that.target.dataset.page
   let currentPage = content.firstChild.dataset.page
   let page = content.firstChild
-  console.log(page)
   if (currentPage === selectedPage) return
   clearPage(page)
   appendPage(selectedPage)
@@ -22,7 +24,6 @@ function clearPage(page) {
 }
 
 function appendPage(page) {
-  console.log(page)
   switch (page) {
     case 'home':
       content.appendChild(home())
@@ -33,8 +34,10 @@ function appendPage(page) {
     case 'contact':
       content.appendChild(contact())
       break
+    default:
+      content.appendChild(home())
+
   }
-  console.log('test')
 }
 
 header.appendChild(nav())

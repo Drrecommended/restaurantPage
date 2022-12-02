@@ -14,11 +14,32 @@
   --info-font: utopia-std, serif;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   background-color: #fffafa;
   color: black;
   font-family: var(--main-font);
   font-size: var(--main-size);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  flex: 0 1 auto;
+}
+
+main {
+  flex: 1 1 auto;
+  background-color: aqua;
+}
+
+footer {
+  flex: 0 1 40px;
+  background-color: blue;
 }
 
 /* nav styling */
@@ -29,12 +50,6 @@ body {
   align-items: center;
   border-bottom: 2px solid var(--main);
 }
-
-/* .headerImg {
-    background: url('./assets/unsplash1.jpg');
-    height: 30px;
-    width: 100%;
-} */
 
 h1 {
   font-family: var(--title-font);
@@ -69,13 +84,23 @@ li {
 
 .sign-in:hover {
   background-color: var(--highlight);
-  border-color: var(--main);
+  border-color: var(--font-color);
   color: var(--font-color);
 }
 
+.nav-link:visited {
+  text-decoration: none;
+  color: black;
+}
 .nav-link:hover,
 .nav-link:focus {
-  color: var(--highlight);
+  color: var(--font-color);
+  border-bottom: 2px solid var(--font-color);
+}
+
+.nav-link:active,
+.nav-link:focus {
+  color: var(--font-color);
 }
 
 .sign-in:hover,
@@ -93,4 +118,14 @@ ul {
 .nav-link,
 .brand-logo {
   display: block;
+  border-bottom: 2px solid transparent;
+}
+
+.homePage {
+  height: 100%;
+  background: url('./assets/unsplash2.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }

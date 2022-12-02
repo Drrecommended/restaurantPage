@@ -1,8 +1,11 @@
+
+
 const home = () => {
-    const hello = document.createElement('div')
-    hello.dataset.page = 'home'
-    hello.textContent = "WELCOME HOME"
-    return hello
+    const home = document.createElement('div')
+    home.classList.add('homePage')
+    home.dataset.page = 'home'
+    home.textContent = "WELCOME HOME"
+    return home
 }
 
 
