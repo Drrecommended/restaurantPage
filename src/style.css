@@ -8,7 +8,9 @@
   --pad: 0.7em;
   --button-pad: 0.5em;
   --button-rad: 10px;
-  --main-size: 18px;
+  --main-size: 20px;
+  --heading-size: 39.2px;
+  --banner-size: clamp(2rem, 9vw, 5rem);
   --main-font: houschka-rounded, sans-serif;
   --title-font: gastromond, sans-serif;
   --info-font: utopia-std, serif;
@@ -38,6 +40,11 @@ main {
 
 footer {
   flex: 0 1 40px;
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .nav, .foot {
@@ -81,15 +88,16 @@ li {
   font-weight: 700;
 }
 
-.nav .sign-in {
+.btn {
   color: var(--highlight);
+  background-color: var(--sub);
   border: 2px solid var(--highlight);
   padding: var(--button-pad);
   border-radius: 18px;
 }
 
-.sign-in:hover {
-  background-color: var(--highlight);
+.btn:hover {
+  background-color: var(--main);
   border-color: var(--font-color);
   color: var(--font-color);
 }
@@ -109,16 +117,17 @@ li {
   color: var(--font-color);
 }
 
-.sign-in:hover,
+.btn:hover,
 .nav-link:hover {
   transition: 0.2s ease-in;
   cursor: pointer;
 }
 
-nav,
+.wrapper,
 ul {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav-link,
@@ -134,6 +143,23 @@ ul {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-bottom: 110px;
+}
+
+.homePage h1 {
+  color: var(--font-color);
+  font-size: var(--banner-size);
+  text-shadow:
+   -1px -1px 0 var(--sub),  
+    3px -3px 0 var(--sub),
+    -2px 2px 0 #000,
+     2px 2px 0 #000;
+  font-family: var(--title-font);
+  text-align: center;
 }
 
 

@@ -6,12 +6,15 @@ const nav = () => {
   const nav = document.createElement('nav')
   nav.classList.add('nav')
 
+  const wrapper = document.createElement('div')
+  wrapper.classList.add('wrapper')
+
   // const brand = document.createElement('i')
   // brand.classList.add('fa-solid')
   // brand.classList.add('fa-pizza-slice')
 
   const signIn = document.createElement('a')
-  signIn.classList.add('sign-in')
+  signIn.classList.add('btn')
   signIn.innerText = 'SIGN IN'
 
   const ul = document.createElement('ul')
@@ -23,7 +26,7 @@ const nav = () => {
     navLink.classList.add('nav-link')
     navLink.title = `a link to ${links[i]}`
     navLink.dataset.page = links[i]
-    navLink.href = "#"
+    navLink.href = '#'
     console.log(navLink.dataset.page)
     li.appendChild(navLink)
     navLink.addEventListener('click', changePage.bind(this))
@@ -31,9 +34,9 @@ const nav = () => {
   }
 
   // nav.appendChild(brand)
-  nav.appendChild(ul)
-  nav.appendChild(signIn)
-
+  wrapper.appendChild(ul)
+  wrapper.appendChild(signIn)
+  nav.appendChild(wrapper)
   return nav
 }
 
