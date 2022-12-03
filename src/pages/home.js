@@ -17,8 +17,11 @@ const home = () => {
   orderBtn.textContent = 'ORDER NOW'
   orderBtn.classList.add('btn')
 
-  home.appendChild(title)
-  home.appendChild(orderBtn)
+
+  homeWrapper.appendChild(timeInfo)
+  homeWrapper.appendChild(title)
+  homeWrapper.appendChild(orderBtn)
+  home.appendChild(homeWrapper)
   return home
 }
 

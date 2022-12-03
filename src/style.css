@@ -130,6 +130,38 @@ ul {
   align-items: center;
 }
 
+.homePage .wrapper {
+  margin: 0 auto;
+  display: grid;
+  grid: 20px 50px 50px 100px 1fr / 16px 100px 1fr 1fr 1fr 270px 16px;
+  height: 100%;
+}
+
+.time-info {
+  align-self: start;
+  border: 1px solid white;
+  color: var(--font-color);
+  padding: 10px;
+  grid-row-start: 2;
+  grid-column-start: 6;
+}
+
+.wrapper h1 {
+  grid-row-start: 4;
+  grid-column-start: 2;
+  grid-column-end: -2;
+  align-self: end;
+}
+
+.homePage .wrapper .btn {
+  grid-row-start: 5;
+  grid-column-start: 2;
+  grid-column-end: -2;
+  align-self: baseline;
+  justify-self: center;
+  width: 150px;
+}
+
 .nav-link,
 .brand-logo {
   display: block;
@@ -143,11 +175,6 @@ ul {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding-bottom: 110px;
 }
 
 .homePage h1 {
