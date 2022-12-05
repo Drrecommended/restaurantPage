@@ -4,7 +4,6 @@ import { navHeader } from './navbar/navHeader'
 import { home } from './pages/home'
 import { menu } from './pages/menu'
 import { contact } from './pages/contact'
-import homePhoto from './assets/unsplash1.jpg'
 
 const header = document.getElementById('header')
 const content = document.getElementById('content')
@@ -40,12 +39,26 @@ function appendPage(page) {
 }
 
 const foot = () => {
+  const footerContainer = document.createElement('div')
+  footerContainer.classList.add('foot')
+  const link = document.createElement('a')
+  link.title = 'a link to my github'
+  link.href = 'https://github.com/Drrecommended'
+  
+  
   const credits = document.createElement('p')
-  credits.classList.add('foot')
-  credits.innerText = 'here are the credits'
-  return credits
-}
 
+  const gitHubIcon = document.createElement('i')
+  gitHubIcon.classList.add('fa-brands')
+  gitHubIcon.classList.add('fa-github')
+  credits.innerText = 'Coded by Tyler French'
+  credits.style = "margin-left: 5px;"
+  link.appendChild(gitHubIcon)
+  link.appendChild(credits)
+  footerContainer.appendChild(link)
+
+  return footerContainer
+}
 
 header.appendChild(nav())
 content.appendChild(home())
