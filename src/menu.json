@@ -1,0 +1,24 @@
+{
+    "pizzas": [
+      {
+        "type": "Cheese",
+        "cost": 19.99,
+        "description": "The classis cheese pizza with basil leaves"
+      },
+      {
+        "type": "Pepperoni",
+        "cost": 21.99,
+        "description": "Same as the cheese but with our homemade pepperoni"
+      },
+      {
+        "type": "Supreme",
+        "cost": 22.99,
+        "description": "Pepperoni, sauasage, onions, peppers, and mushrooms all piled high"
+      },
+      {
+        "type": "Meat Lovers",
+        "cost": 24.99,
+        "description": "Leave your vegetarian friends at home this pie has all the meats. Pepperoni, sausage, ham and bacon with pepper flakes"
+      }
+    ]
+  }

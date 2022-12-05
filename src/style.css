@@ -82,9 +82,11 @@ footer {
   border-bottom: 2px solid var(--main);
 }
 
-h1 {
+h1, h2, h3, h4 {
   font-family: var(--title-font);
 }
+
+
 
 .info {
   font-family: var(--info-font);
@@ -203,4 +205,14 @@ ul {
     2px 2px 0 #000;
   font-family: var(--title-font);
   text-align: center;
+}
+
+/* menu item styling */
+.item-grid {
+  display: grid;
+
+}
+
+.item-grid .description {
+  font-family: var(--info-font);
 }
