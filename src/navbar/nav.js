@@ -37,7 +37,7 @@ const nav = () => {
   wrapper.appendChild(ul)
   wrapper.appendChild(signIn)
   nav.appendChild(wrapper)
-  return nav
+  return nav 
 }
 
 export { nav }

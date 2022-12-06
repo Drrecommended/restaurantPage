@@ -1,6 +1,5 @@
 import './style.css'
 import { nav } from './navbar/nav'
-import { navHeader } from './navbar/navHeader'
 import { home } from './pages/home'
 import { menu } from './pages/menu'
 import { contact } from './pages/contact'
@@ -10,6 +9,11 @@ const content = document.getElementById('content')
 const footer = document.getElementById('footer')
 
 export default function changePage(that) {
+  const links = document.querySelectorAll('.nav-link')
+  for(let i = 0; i < links.length; i++) {
+    links[i].classList.remove('active')
+  }
+  that.target.classList.add('active')
   let selectedPage = that.target.dataset.page
   let currentPage = content.firstChild.dataset.page
   let page = content.firstChild
@@ -17,6 +21,8 @@ export default function changePage(that) {
   clearPage(page)
   appendPage(selectedPage)
 }
+
+
 
 function clearPage(page) {
   content.removeChild(page)
