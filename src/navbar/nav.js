@@ -27,7 +27,6 @@ const nav = () => {
     navLink.title = `a link to ${links[i]}`
     navLink.dataset.page = links[i]
     navLink.href = '#'
-    console.log(navLink.dataset.page)
     li.appendChild(navLink)
     navLink.addEventListener('click', changePage.bind(this))
     ul.appendChild(li)

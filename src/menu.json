@@ -1,24 +1,47 @@
 {
-    "pizzas": [
-      {
-        "type": "Cheese",
-        "cost": 19.99,
-        "description": "The classis cheese pizza with basil leaves"
-      },
-      {
-        "type": "Pepperoni",
-        "cost": 21.99,
-        "description": "Same as the cheese but with our homemade pepperoni"
-      },
-      {
-        "type": "Supreme",
-        "cost": 22.99,
-        "description": "Pepperoni, sauasage, onions, peppers, and mushrooms all piled high"
-      },
-      {
-        "type": "Meat Lovers",
-        "cost": 24.99,
-        "description": "Leave your vegetarian friends at home this pie has all the meats. Pepperoni, sausage, ham and bacon with pepper flakes"
-      }
-    ]
-  }
+  "pizzas": [
+    {
+      "type": "Cheese",
+      "cost": 19.99,
+      "description": "The classis cheese pizza with basil leaves"
+    },
+    {
+      "type": "Pepperoni",
+      "cost": 21.99,
+      "description": "Same as the cheese but with our homemade pepperoni"
+    },
+    {
+      "type": "Supreme",
+      "cost": 22.99,
+      "description": "Pepperoni, sauasage, onions, peppers, and mushrooms all piled high"
+    },
+    {
+      "type": "Meat Lovers",
+      "cost": 24.99,
+      "description": "Leave your vegetarian friends at home this pie has all the meats. Pepperoni, sausage, ham and bacon with pepper flakes"
+    }
+  ],
+  "sides": [
+    {
+      "type": "Chicken fingers",
+      "cost": 12.99,
+      "description": "6-fingers breaded with your choice of buffalo, bbq, or teriyaki sauce"
+    },
+    {
+      "type": "Chicken wings",
+      "cost": 13.99,
+      "description": "12-wings breaded with your choice of buffalo, bbq, or teriyaki sauce"
+    },
+    {
+      "type": "Ceaser salad",
+      "cost": 11.99,
+      "description": "romain tossed with parmesan, ceaser dressing, amd croutons"
+    }
+  ],
+  "drinks": [
+    {
+      "type": "Coke, Sunkist, Sprite, Dr. Pepper cans",
+      "cost": 1.99
+    }
+  ]
+}

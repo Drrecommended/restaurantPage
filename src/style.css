@@ -20,7 +20,7 @@ html,
 body {
   height: 100%;
   /*come back and see what this does */
-  font-display: swap;
+  font-display: auto;
 }
 
 body {
@@ -192,7 +192,7 @@ ul {
 .homePage {
   height: 100%;
   background-color: black;
-  background: url('./assets/unsplash2.jpg') no-repeat center center fixed;
+  /* background: url('./assets/unsplash2.jpg') no-repeat center center fixed; */
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -230,9 +230,15 @@ ul {
   letter-spacing: 3px;
 }
 
+.sub-menu {
+  margin-bottom: 20px;
+  display: inline-block;
+  border-bottom: 1px solid black;
+}
 
 /* menu item styling */
-.item h4, p:first-of-type {
+.item h4,
+p:first-of-type {
   display: inline;
 }
 
@@ -244,5 +250,5 @@ ul {
   font-family: var(--info-font);
   color: var(--main);
   border-top: 2px dashed var(--sub);
-  margin-bottom: 2em;
+  margin-bottom: 10px;
 }
