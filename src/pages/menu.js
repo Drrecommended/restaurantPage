@@ -9,7 +9,7 @@ const menu = () => {
     menu.appendChild(menuTitle)
     menuData.pizzas.forEach(pizza => {
         const itemContainer = document.createElement('div')
-        itemContainer.classList.add('item-grid')
+        itemContainer.classList.add('item')
         const item = document.createElement('h4')
         item.innerText = pizza.type
         const price = document.createElement('p')

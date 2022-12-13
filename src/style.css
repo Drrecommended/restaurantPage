@@ -217,11 +217,32 @@ ul {
   color: var(--font-color);
 }
 
-/* menu item styling */
-.item-grid {
-  display: grid;
+/* menu */
+.menu-container {
+  padding: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: var(--font-color);
 }
 
-.item-grid .description {
+.menu-container h2 {
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+
+/* menu item styling */
+.item h4, p:first-of-type {
+  display: inline;
+}
+
+.item p:first-of-type {
+  float: right;
+}
+
+.item .description {
   font-family: var(--info-font);
+  color: var(--main);
+  border-top: 2px dashed var(--sub);
+  margin-bottom: 2em;
 }
