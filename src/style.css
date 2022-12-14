@@ -32,6 +32,11 @@ body {
   flex-direction: column;
 }
 
+#content {
+  background-color: var(--highlight);
+  position: relative;
+}
+
 header {
   flex: 0 1 auto;
 }
@@ -56,6 +61,15 @@ footer {
 
 .foot {
   height: 100%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex i {
+  margin-right: 5px;
 }
 
 .foot a {
@@ -192,7 +206,7 @@ ul {
 .homePage {
   height: 100%;
   background-color: black;
-  /* background: url('./assets/unsplash2.jpg') no-repeat center center fixed; */
+  background: url('./assets/unsplash2.jpg') no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -216,6 +230,7 @@ ul {
 .active:visited {
   color: var(--font-color);
 }
+
 
 /* menu */
 .menu-container {
@@ -251,4 +266,21 @@ p:first-of-type {
   color: var(--main);
   border-top: 2px dashed var(--sub);
   margin-bottom: 10px;
+}
+
+/* contact page */
+.contact-page {
+  background-color: #fffafa;
+  width: 75%;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2em;
+}
+
+.contact-page .map {
+  width: 380px;
+  height: 380px;
+  background-color: black;
+  display: block;
+  margin: 0 auto;
 }
