@@ -271,16 +271,16 @@ p:first-of-type {
 /* contact page */
 .contact-page {
   background-color: #fffafa;
-  width: 75%;
-  max-width: 700px;
+  width: clamp(270px, 75%, 700px);
   margin: 0 auto;
   padding: 2em;
+  margin-top: 3em;
 }
 
 .contact-page .map {
-  width: 380px;
-  height: 380px;
-  background-color: black;
+  width: 50%;
+  height: 50%;
+  background-color: green;
   display: block;
   margin: 0 auto;
 }

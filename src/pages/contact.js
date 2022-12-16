@@ -1,3 +1,5 @@
+
+
 const contact = () => {
   const contact = document.createElement('div')
   contact.classList.add('contact-page')
@@ -27,6 +29,8 @@ const contact = () => {
 
   const map = document.createElement('span')
   map.classList.add('map')
+  map.innerText = "map here"
+
 
   const emailContainer = document.createElement('div')
   emailContainer.classList.add('flex')
